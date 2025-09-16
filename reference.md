@@ -31,17 +31,17 @@ The key authentication process involves five main components. The table below de
 
 ## Troubleshooting
 
-In a SSH key authentication configuration, small details can prevent a successful connection. This section covers the most common errors, explaining their likely causes and recommended remediation actions.
+In an SSH Key Authentication configuration, small details can prevent a successful connection. This section covers the most common errors, explaining their likely causes and recommended remediation actions.
 
 | **Common error**  | **Probable cause**  | **Recommended action**   |
 |-------------------|---------------------|---------------------------|
-| The server refused your key | The server found the `authorized_keys` file but the public key offered by PuTTY doesn't match a valid key on the list. The most common causes are:<br> <br><ul><li>Copy/paste error</li><li>File formatting</li><li>Inappropriate permissions</li></ul> | <ul><li>Load your private key on PuTTY Key Generator, copy the public key and replace the content of the `authorized_keys` file.</li><li>Make sure that the public key is in a single line and the `authorized_keys` file doesn't have any extension.</li><li>Verify that only your user, `SYSTEM` and `Administrators` have access permissions for the `authorized_keys` file on the server.</li></ul> |
-| The connection closes abruptly | The problem is on the PuTTY client, that attempts another authentication method before the public key, and this method fails in a way that ends the connection prematurely. | <ul><li>Verify if Pageant is running in the System Tray and close it.</li><li>During the session configuration in PuTTY, go to **Connection > SSH > Auth** and disable the priority of the GSSAPI method.</li><li>Remember to **save the session** after any changes.</li></ul> |
-| PuTTY ignores the key and asks for the password directly | PuTTY was not configured correctly to use a key or can't find the `.ppk` file. The most common cause is that the session configuration were not saved. | <ul><li>Open PuTTY, load your saved session and go to **Connection > SSH > Auth > Credentials**.</li><li>Make sure that the path to your private key file is correct. Use the **Browse…** button to select your `.ppk` file again.</li><li>Go back to the **Session** category and click the **Save** button to save your changes on the session.</li></ul> |
+| The server refused your key | The server found the `authorized_keys` file, but the public key offered by PuTTY doesn't match a valid key on the list. The most common causes are:<br> <br><ul><li>Copy/paste error</li><li>File formatting</li><li>Inappropriate permissions</li></ul> | <ul><li>Load your private key on PuTTY Key Generator, copy the public key and replace the content of the `authorized_keys` file.</li><li>Make sure that the public key is in a single line and the `authorized_keys` file doesn't have any extension.</li><li>Verify that only your user, `SYSTEM`, and `Administrators` have access permissions for the `authorized_keys` file on the server.</li></ul> |
+| The connection closes abruptly | The problem lies with the PuTTY client, which attempts another authentication method before the public key, and this method fails in a way that prematurely ends the connection. | <ul><li>Verify if Pageant is running in the System Tray and close it.</li><li>During the session configuration in PuTTY, go to **Connection > SSH > Auth** and disable the priority of the GSSAPI method.</li><li>Remember to **save the session** after any changes.</li></ul> |
+| PuTTY ignores the key and asks for the password directly | PuTTY was not configured correctly to use a key, or cannot find the `.ppk` file. The most common cause is that the session configuration was not saved. | <ul><li>Open PuTTY, load your saved session, and go to **Connection > SSH > Auth > Credentials**.</li><li>Make sure that the path to your private key file is correct. Use the **Browse…** button to select your `.ppk` file again.</li><li>Go back to the **Session** category and click the **Save** button to save your changes to the session.</li></ul> |
 
 > **INFO**
 > 
-> As a general rule, the source of truth for most authentication errors are the **SSH server logs**. On Windows, they can be found in the Event Viewer (`eventvwr.msc`) under **Applications and Services Logs > OpenSSH > Operational**.
+> As a general rule, the source of truth for most authentication errors is the **SSH server logs**. On Windows, they can be found in the Event Viewer (`eventvwr.msc`) under **Applications and Services Logs > OpenSSH > Operational**.
 
 ## Quick action summary
 
@@ -54,9 +54,9 @@ In a SSH key authentication configuration, small details can prevent a successfu
 
 ---
 
-> * For deeper understanding of the concepts behind the SSH Key Authentication process, see our [SSH Key Authentication](explanation.md) documentation.
+> * For a deeper understanding of the concepts behind the SSH Key Authentication process, see our [SSH Key Authentication](explanation.md) documentation.
 > * For detailed information about the usage of SSH keys in PuTTY, visit our step-by-step guide on [How to set up SSH Key Authentication in PuTTY](tutorial.md).
 
-
 ---
+
 
