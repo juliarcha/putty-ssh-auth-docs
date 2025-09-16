@@ -1,4 +1,4 @@
-# Quick reference: SSH Key Authentication
+# Quick reference: SSH key authentication
 
 > * [Overview](#overview)
 > * [Control panel and components](#control-panel-and-components)
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This document provides a quick reference on components, settings, and troubleshooting of the SSH Key Authentication process in PuTTY.
+This document provides a quick reference on components, settings, and troubleshooting of the SSH key authentication process in PuTTY.
 
 ### Authentication flow
 
@@ -31,7 +31,7 @@ The key authentication process involves five main components. The table below de
 
 ## Troubleshooting
 
-In an SSH Key Authentication configuration, small details can prevent a successful connection. This section covers the most common errors, explaining their likely causes and recommended remediation actions.
+In an SSH key authentication configuration, small details can prevent a successful connection. This section covers the most common errors, explaining their likely causes and recommended remediation actions.
 
 | **Common error**  | **Probable cause**  | **Recommended action**   |
 |-------------------|---------------------|---------------------------|
@@ -54,7 +54,8 @@ In an SSH Key Authentication configuration, small details can prevent a successf
 
 ---
 
-> * For a deeper understanding of the concepts behind the SSH Key Authentication process, see our [SSH Key Authentication](explanation.md) documentation.
-> * For detailed information about the usage of SSH keys in PuTTY, visit our step-by-step guide on [How to set up SSH Key Authentication in PuTTY](tutorial.md).
+> * For a deeper understanding of the concepts behind the SSH key authentication process, see our [SSH key authentication](explanation.md) documentation.
+> * For detailed information about the usage of SSH keys in PuTTY, visit our step-by-step guide on [How to set up SSH key authentication in PuTTY](tutorial.md).
 
 ---
+
