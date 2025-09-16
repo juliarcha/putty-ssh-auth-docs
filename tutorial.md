@@ -130,7 +130,8 @@ The passphrase is responsible for encrypting your private key file. With a passp
 
 ---
 
-> * For deeper understanding of the concepts behind the SSH Key Authentication process, see our [SSH Key Authentication](explanation.md) documentation.
+> * For deeper understanding of the concepts behind the SSH Key Authentication process, visit our [SSH Key Authentication](explanation.md) documentation.
 > * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH Key Authentication](reference.md).
+
 
 ---
