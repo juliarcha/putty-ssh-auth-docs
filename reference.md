@@ -58,5 +58,3 @@ In an SSH Key Authentication configuration, small details can prevent a successf
 > * For detailed information about the usage of SSH keys in PuTTY, visit our step-by-step guide on [How to set up SSH Key Authentication in PuTTY](tutorial.md).
 
 ---
-
-
