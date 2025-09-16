@@ -5,13 +5,13 @@
 > * [Step 2: Installing a public key on the server](#step-2-installing-a-public-key-on-the-server)
 > * [Step 3: Configuring a new session in PuTTY](#step-3-configuring-a-new-session-in-putty)
 > * [Step 4: Establishing a connection with key authentication](#step-4-establishing-a-connection-with-key-authentication)
-> * [Adding an extra safety layer with passphrase](#adding-an-extra-safety-layer-with-passphrase)
+> * [Adding an extra safety layer with a passphrase](#adding-an-extra-safety-layer-with-a-passphrase)
 
 ---
 
 Key authentication is the most professional and reliable method to establish a secure connection with SSH servers. This document will guide you through each step of the key authentication process in PuTTY, using the SSH protocol and a cryptographic key pair. 
 
-By the end of this guide, you will be able to generate an SSH key pair and configure PuTTY to establish a secure connection with your server, without needing to enter a password at each access. 
+By the end of this guide, you will be able to generate an SSH key pair and configure PuTTY to establish a secure connection with your server, without the need to enter a password at each access. 
 
 ## Requirements
 
@@ -29,7 +29,7 @@ Your first task is to create the keys that will be your new digital identity. Fo
 
     ![PuTTY Key Generator interface with the "Generate" button highlighted in red inside the "Actions" section.](/images/puttygen-interface.png)
 
-3. Move your cursor randomly around the blank area in the **Key** section, below the progress bar. This movement generates the randomness needed to calculate and create a strong cryptographic key. Continue until the progress bar is complete. By the end of the process, you'll have generated:
+3. Move your cursor randomly around the blank area in the **Key** section, below the progress bar. This movement generates the randomness needed to calculate and create a strong cryptographic key. Keep moving the cursor until the progress bar is complete. By the end of the process, you'll have generated:
     * A public key
     * A key fingerprint
     * A key comment
@@ -38,7 +38,7 @@ Your first task is to create the keys that will be your new digital identity. Fo
 
     !["Actions" section in PuTTY Key Generator's interface with the "Save private key" button highlighted in red.](/images/save-private-key.png)
 
-    > Later in this document, we explain the process of [Adding an extra safety layer with passphrase](#adding-an-extra-safety-layer-with-passphrase).
+    > Later in this document, we explain the process of [Adding an extra safety layer with a passphrase](#adding-an-extra-safety-layer-with-a-passphrase).
 
 5. Choose a secure location on your computer and save the `.ppk` (PuTTY Private Key) file with a descriptive name (e.g., `my_private_key.ppk`).
 
@@ -58,7 +58,7 @@ Your first task is to create the keys that will be your new digital identity. Fo
 
 The second step is telling the server to trust your new key.
 
-1. Open the PuTTY (`PuTTY.exe`) program and connect to your `localhost` server in the **Session** category. For that, you'll use the port 22 and the SSH connection type.
+1. Open the PuTTY (`PuTTY.exe`) program and connect to your `localhost` server in the **Session** category. For that, you'll use port 22 and the SSH connection type.
 
     ![PuTTY Configuration's interface with the "Session" category opened and the "Specify the destination you want to connect to" section highlighted in red.](/images/putty-config.png)
 
@@ -76,7 +76,7 @@ The second step is telling the server to trust your new key.
 
     > **TIP**
     > 
-    > You can verify that the `.ssh` directory was successfuly created by running this command: 
+    > You can verify that the `.ssh` directory was successfully created by running this command: 
     >
     > ```shell
     > dir .ssh
@@ -92,7 +92,7 @@ The second step is telling the server to trust your new key.
 
     This will open the Notepad program, where you will paste the public key copied from PuTTY Key Generator. 
     
-5. Save the file (`Ctrl + S`), then close the Notepad and your current PuTTY session.
+5. Save the file (`Ctrl + S`), then close Notepad and your current PuTTY session.
 
 ## Step 3: Configuring a new session in PuTTY
 
@@ -118,11 +118,11 @@ Now, you can check the result by connecting to the server with your new configur
 
 2. When the terminal window opens, you will be logged in to the server automatically, without any password requested. The server used your public key to validate the signature from the private key presented by PuTTY, confirming your identity securely.
 
-## Adding an extra safety layer with passphrase
+## Adding an extra safety layer with a passphrase
 
-For maximum security in your connection, you can protect your private key with a password, known as **passphrase**.
+For maximum security in your connection, you can protect your private key with a password, known as your **passphrase**.
 
-The passphrase is responsible for encrypting your private key file. With a passphrase, even if your `.ppk` file is compromised, it cannot be used without the password. Altought it is optional, adding a passphrase is highly recommended to increase the security of your credentials. 
+The passphrase is responsible for encrypting your private key file. With this solution, even if your `.ppk` file is compromised, it cannot be used without the password. Although it is optional, adding a passphrase is highly recommended to increase the security of your credentials. 
 
 1. When generating a key pair with PuTTY Key Generator, fill in the **Key passphrase** and **Confirm passphrase** fields with a strong password before saving the private key file.
 
@@ -130,8 +130,7 @@ The passphrase is responsible for encrypting your private key file. With a passp
 
 ---
 
-> * For deeper understanding of the concepts behind the SSH Key Authentication process, visit our [SSH Key Authentication](explanation.md) documentation.
+> * For a deeper understanding of the concepts behind the SSH Key Authentication process, visit our [SSH Key Authentication](explanation.md) document.
 > * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH Key Authentication](reference.md).
-
 
 ---
