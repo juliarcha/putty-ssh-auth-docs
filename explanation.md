@@ -1,4 +1,4 @@
-# SSH Key Authentication
+# SSH key authentication
 
 > * [The importance of SSH in secure authentication](#the-importance-of-ssh-in-secure-authentication)
 > * [Public and private key cryptography](#public-and-private-key-cryptography)
@@ -10,9 +10,9 @@
 
 For many tech professionals and enthusiasts, PuTTY is an essential tool for connecting local computers to servers around the world. It uses the **SSH protocol** to establish a secure connection, allowing users to manage systems, transfer files, and execute commands remotely. 
 
-In a common scenario, you would use a login and a password to authenticate the connection using PuTTY's interface. However, the password-based method has significant security and efficiency limitations. While the SSH protocol encrypts the password during transmission, the password itself remains a vulnerable target. The **SSH Key Authentication** feature addresses this weakness, providing a robust method for establishing secure connections to remote servers.
+In a common scenario, you would use a login and a password to authenticate the connection using PuTTY. However, the password-based method has significant security and efficiency limitations. While the SSH protocol encrypts the password during transmission, the password itself remains a vulnerable target. The **SSH key authentication** feature addresses this weakness, providing a robust method for establishing secure connections to remote servers.
 
-This document explains the concept behind SSH Key Authentication, one of PuTTY's powerful functionalities, responsible for replacing the vulnerability of a password with a cryptographic proof of identity. 
+This document explains the concept behind SSH key authentication, one of PuTTY's powerful functionalities, responsible for replacing the vulnerability of a password with a cryptographic proof of identity. 
 
 After this reading, you will understand why this solution is the professional standard for secure remote access.
 
@@ -67,7 +67,8 @@ By incorporating this authentication method, you’ll instantly see improvements
 
 ---
 
-> * For detailed information about the usage of SSH keys, visit our step-by-step guide on [How to set up SSH Key Authentication in PuTTY](tutorial.md).
-> * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH Key Authentication](reference.md).
+> * For detailed information about the usage of SSH keys, visit our step-by-step guide on [How to set up SSH key authentication in PuTTY](tutorial.md).
+> * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH key authentication](reference.md).
 
 ---
+
