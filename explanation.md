@@ -20,7 +20,7 @@ After this reading, you will understand why this solution is the professional st
 
 Key authentication is the most recommended way to connect to servers, surpassing password-based authentication. By combining key authentication with the SSH protocol, you can ensure secure access to servers in any location. 
 
-To understand the importance of keys, the first step is learning how the **SSH protocol** works. Secure Shell is a network protocol that enables secure communication between two computers in a network with safety limitations: the internet. Based on the principles of **security** and **flexibility**, the SSH protocol provides three fundamental guarantees:
+To understand the importance of keys, the first step is learning how the **SSH protocol** works. Secure Shell is a network protocol that enables secure communication between two computers on the internet, a network with safety limitations. Based on the principles of **security** and **flexibility**, the SSH protocol provides three fundamental guarantees:
 
 1. **Confidentiality**: Since the data traffic is encrypted, the information shared between computers cannot be accessed by unauthorized users.
 2. **Integrity**: SSH ensures that the data sent is not altered along the way.
@@ -30,17 +30,9 @@ Passwords and keys play their role in the authentication pillar. Although the SS
 
 ## Public and private key cryptography
 
-The key authentication process is a system known as **asymmetric cryptography**. It relies on a mathematically linked pair of keys, which is called a **cryptographic pair**, and follows a strict rule: what the public key encrypts, only the corresponding private key can decrypt.
+The key authentication process is a system known as **asymmetric cryptography**. It relies on a mathematically linked pair of keys, known as a **cryptographic pair**, and follows a strict rule: what a public key encrypts, only the corresponding private key can decrypt.
 
-Let's understand what are public and private keys:
-
-* **Public key**
-  * Can be shared openly without compromising security.
-  * Used to encrypt data or verify a digital signature.
-
-* **Private key** 
-  * Must be kept secret and secure.
-  * Used to decrypt data or create a digital signature.
+The **public key** can be shared openly without compromising security. It is used to encrypt data or verify a digital signature. On the other hand, the **private key** must be kept secret and secure, and is used to decrypt data or create a digital signature.
 
 > **INFO**
 > 
@@ -60,10 +52,10 @@ When you configure and use keys for authentication, a secure and invisible dialo
 1. **Preparation**: To start a dialogue between the tool and the server, you'll copy the public key and install it on the server using a specific file for authorized keys.
 2. **Connection**: You establish a connection with PuTTY, which is configured to use your private key.
 3. **Challenge**: When the SSH server sees your registered public key, it creates a random, unique message — called a "challenge" — and encrypts it using your public key. This encrypted challenge is then sent to your PuTTY client.
-4. **Proof**: Your PuTTY client uses the private key stored on your computer to successfully decrypt the challenge.
+4. **Proof**: Your PuTTY client uses the private key stored on your computer to decrypt the challenge.
 5. **Validation**: PuTTY sends the decrypted answer back to the server, which confirms that the answer is correct. Since only the bearer of the private key could have decrypted the message, it grants access.
 
-The entire process happens in a fraction of a second, but the most important concept to understand is that your private key — the secret of your identity — **never travels across the network**.
+This entire process happens in a fraction of a second. The most important concept to understand is that your private key — the secret of your identity — **never travels across the network**.
 
 ## Benefits
 
@@ -79,5 +71,3 @@ By incorporating this authentication method, you’ll instantly see improvements
 > * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH Key Authentication](reference.md).
 
 ---
-
-
