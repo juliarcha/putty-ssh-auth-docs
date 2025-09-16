@@ -22,7 +22,7 @@ Key authentication is the most recommended way to connect to servers, surpassing
 
 To understand the importance of keys, the first step is learning how the **SSH protocol** works. Secure Shell is a network protocol that enables secure communication between two computers on the internet, a network with safety limitations. Based on the principles of **security** and **flexibility**, the SSH protocol provides three fundamental guarantees:
 
-1. **Confidentiality**: Since the data traffic is encrypted, the information shared between computers cannot be accessed by unauthorized users.
+1. **Confidentiality**: Since data traffic is encrypted, the information shared between computers cannot be accessed by unauthorized users.
 2. **Integrity**: SSH ensures that the data sent is not altered along the way.
 3. **Authentication**: SSH verifies the identity of the user trying to connect to ensure only authorized users have access.
 
@@ -71,4 +71,5 @@ By incorporating this authentication method, you’ll instantly see improvements
 > * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH key authentication](reference.md).
 
 ---
+
 
