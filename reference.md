@@ -9,7 +9,7 @@
 
 ## Overview
 
-This document provides a quick reference for the components, settings, and troubleshooting of the SSH key authentication process in PuTTY.
+This document provides a quick reference on components, settings, and troubleshooting of the SSH Key Authentication process in PuTTY.
 
 ### Authentication flow
 
@@ -41,7 +41,7 @@ In a SSH key authentication configuration, small details can prevent a successfu
 
 > **INFO**
 > 
-> As a general rule, the source of truth for most authentication errors are the **SSH server logs**. On Windows, these can be found in the Event Viewer (`eventvwr.msc`) under **Applications and Services Logs > OpenSSH > Operational**.
+> As a general rule, the source of truth for most authentication errors are the **SSH server logs**. On Windows, they can be found in the Event Viewer (`eventvwr.msc`) under **Applications and Services Logs > OpenSSH > Operational**.
 
 ## Quick action summary
 
@@ -59,3 +59,4 @@ In a SSH key authentication configuration, small details can prevent a successfu
 
 
 ---
+
