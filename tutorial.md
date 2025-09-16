@@ -1,4 +1,4 @@
-# How to set up SSH Key Authentication in PuTTY
+# How to set up SSH key authentication in PuTTY
 
 > * [Requirements](#requirements)
 > * [Step 1: Generating a key pair with PuTTY Key Generator](#step-1-generating-a-key-pair-with-putty-key-generator)
@@ -130,7 +130,7 @@ The passphrase is responsible for encrypting your private key file. With this so
 
 ---
 
-> * For a deeper understanding of the concepts behind the SSH Key Authentication process, visit our [SSH Key Authentication](explanation.md) document.
-> * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH Key Authentication](reference.md).
+> * For a deeper understanding of the concepts behind the SSH key authentication process, visit our [SSH key authentication](explanation.md) document.
+> * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH key authentication](reference.md).
 
 ---
