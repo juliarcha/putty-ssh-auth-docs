@@ -8,25 +8,25 @@
 
 ---
 
-For many tech professionals enthusiasts, PuTTY is an essential tool for connecting local computers to servers around the world. It uses the **SSH protocol** to establish a secure connection, allowing users to manage systems, transfer files, and execute commands remotely. 
+For many tech professionals and enthusiasts, PuTTY is an essential tool for connecting local computers to servers around the world. It uses the **SSH protocol** to establish a secure connection, allowing users to manage systems, transfer files, and execute commands remotely. 
 
 In a common scenario, you would use a login and a password to authenticate the connection using PuTTY's interface. However, the password-based method has significant security and efficiency limitations. While the SSH protocol encrypts the password during transmission, the password itself remains a vulnerable target. The **SSH Key Authentication** feature addresses this weakness, providing a robust method for establishing secure connections to remote servers.
 
-This document explains the concept behind the SSH Key Authentication, one of PuTTY's powerful functionalities, responsible for replacing the vulnerability of a password with a cryptographic proof of identity. 
+This document explains the concept behind SSH Key Authentication, one of PuTTY's powerful functionalities, responsible for replacing the vulnerability of a password with a cryptographic proof of identity. 
 
 After this reading, you will understand why this solution is the professional standard for secure remote access.
 
 ## The importance of SSH in secure authentication
 
-Key authentication is the most recommended way to connect to servers, surpassing the password-based authentication. By combining key authentication with the SSH protocol, you can ensure a secure access to servers in any location. 
+Key authentication is the most recommended way to connect to servers, surpassing password-based authentication. By combining key authentication with the SSH protocol, you can ensure secure access to servers in any location. 
 
-To understand the importance of keys, the first step is learning how the **SSH protocol** works. Secure Shell is a network protocol that enables the secure communication between two computers in a network with safety limitations like the internet. Based on the principles of **security** and **flexibility**, the SSH protocol provides three fundamental guarantees:
+To understand the importance of keys, the first step is learning how the **SSH protocol** works. Secure Shell is a network protocol that enables secure communication between two computers in a network with safety limitations: the internet. Based on the principles of **security** and **flexibility**, the SSH protocol provides three fundamental guarantees:
 
 1. **Confidentiality**: Since the data traffic is encrypted, the information shared between computers cannot be accessed by unauthorized users.
 2. **Integrity**: SSH ensures that the data sent is not altered along the way.
 3. **Authentication**: SSH verifies the identity of the user trying to connect to ensure only authorized users have access.
 
-Passwords and keys play their role in the authentication pillar. Although the SSH protocol supports password authentication, it was designed for a much more robust, secure and efficient method, which addresses the inherent weaknesses of passwords, such as phising, brute-force attacks, and reuse across multiple systems.
+Passwords and keys play their role in the authentication pillar. Although the SSH protocol supports password authentication, it was designed for a much more robust, secure, and efficient method, which addresses the inherent weaknesses of passwords, such as phishing, brute-force attacks, and reuse across multiple systems.
 
 ## Public and private key cryptography
 
@@ -63,7 +63,7 @@ When you configure and use keys for authentication, a secure and invisible dialo
 4. **Proof**: Your PuTTY client uses the private key stored on your computer to successfully decrypt the challenge.
 5. **Validation**: PuTTY sends the decrypted answer back to the server, which confirms that the answer is correct. Since only the bearer of the private key could have decrypted the message, it grants access.
 
-The entire process happens in a fraction of a second, but the most concept to understand is that your private key — the secret of your identity — **never travels across the network**.
+The entire process happens in a fraction of a second, but the most important concept to understand is that your private key — the secret of your identity — **never travels across the network**.
 
 ## Benefits
 
@@ -71,13 +71,13 @@ By incorporating this authentication method, you’ll instantly see improvements
 
 * **Enhanced security**: Cryptographic keys are much more complex than any human-created password, making brute-force attacks infeasible.
 * **Simplified login and automation**: After the initial setup, you can connect to servers without needing a password at each login, which is ideal for improving productivity and automating scripts.
-* **Scalable access management**: In an environent with multiple users and servers, managing access becomes simpler. To grant access, you only need to add a public key. If you want to revoke access, you can simply remove it.
+* **Scalable access management**: In an environment with multiple users and servers, managing access becomes simpler. To grant access, you only need to add a public key. If you want to revoke access, you can simply remove it.
 
 ---
 
-> * For detailed information about the usage of SSH keys in PuTTY, visit our step-by-step guide on [How to set up SSH Key Authentication in PuTTY](tutorial.md).
+> * For detailed information about the usage of SSH keys, visit our step-by-step guide on [How to set up SSH Key Authentication in PuTTY](tutorial.md).
 > * For quick reference on settings, commands, and troubleshooting, see our [Quick reference: SSH Key Authentication](reference.md).
 
-
 ---
+
 
