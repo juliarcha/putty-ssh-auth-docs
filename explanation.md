@@ -32,17 +32,15 @@ Passwords and keys play their role in the authentication pillar. Although the SS
 
 The key authentication process is a system known as **asymmetric cryptography**. It relies on a mathematically linked pair of keys, which is called a **cryptographic pair**, and follows a strict rule: what the public key encrypts, only the corresponding private key can decrypt.
 
-Let's understand what are public and private keys?
+Let's understand what are public and private keys:
 
-### Public key
+* **Public key**
+  * Can be shared openly without compromising security.
+  * Used to encrypt data or verify a digital signature.
 
-* Can be shared openly without compromising security.
-* Used to encrypt data or verify a digital signature.
-
-### Private key 
-
-* Must be kept secret and secure.
-* Used to decrypt data or create a digital signature.
+* **Private key** 
+  * Must be kept secret and secure.
+  * Used to decrypt data or create a digital signature.
 
 > **INFO**
 > 
@@ -82,3 +80,4 @@ By incorporating this authentication method, you’ll instantly see improvements
 
 
 ---
+
